@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="./css/normalize.css">
+  <link rel="stylesheet" href="./css/bootstrap-grid.min.css">
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
+  <title>Лендинг_отели</title>
+</head>
+<body>
+<header class="header">
+  <div class="container">
+    <div class="header-container">
+    <div class="header-left">
+      <a href="#" class="header-logo">
+        <svg class="img-logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="261" height="54" viewBox="0 0 261 54">
+          <metadata><?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
+        <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c142 79.160924, 2017/07/13-01:06:39        ">
+           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+              <rdf:Description rdf:about=""/>
+           </rdf:RDF>
+        </x:xmpmeta>
+        <?xpacket end="w"?></metadata>
+        <image id="Logo" width="261" height="54" xlink:href="data:img/png;base64,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"/>
+        </svg>
+      </a>
+      <span class="header-number">+7 495 322 54 48 </span>
+    </div>
+    <div class="header-right">
+      <a href="#" class="header-right-user">
+        <span class="header-user"><img class="header-user-img" src="./img/Шапка/ls.png" alt="">
+        </span>
+      </a>
+    </div>
+    </div>
+    <nav class="header-nav">
+      <ul class="header-nav-list">
+        <li class="header-nav-item">
+          <a href="#" class="header-nav-link regular">О нас</a>
+        </li>
+        <li class="header-nav-item">
+          <a href="#" class="header-nav-link regular">Услуги</a>
+        </li>
+        <li class="header-nav-item">
+          <a href="#" class="header-nav-link regular">Преимущества</a>
+        </li>
+        <li class="header-nav-item">
+          <a href="#" class="header-nav-link regular">Размещение</a>
+        </li>
+        <li class="header-nav-item">
+          <a href="#" class="header-nav-link regular">Блог</a>
+        </li>
+        <li class="header-nav-item">
+          <a href="#" class="header-nav-link regular">Контакты</a>
+        </li>
+        <div class="search">
+          <input class="search-input regular" type="search" placeholder="Поиск">
+          <button class="button-search">
+          <svg class="svg-input" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="22" height="22" viewBox="0 0 22 22">
+            <metadata><?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
+          <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c142 79.160924, 2017/07/13-01:06:39        ">
+             <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+                <rdf:Description rdf:about=""/>
+             </rdf:RDF>
+          </x:xmpmeta>
+          <?xpacket end="w"?></metadata>
+          <image id="search" width="22" height="22" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAQAAABuvaSwAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfkCx0PFDCXie2jAAABWElEQVQoz43SsUuUYRzA8c89QaQGtkk3NelwkNwl4qCr1KroEv0BTQ7SFFg4SnZrbuGa0y0dhyS6CPK0uGvDcQ0Owg2HEsQ1ePg8XXfYd30//Pj93vctPNMrWLakbMKVM3W7mhClCj0875MS6BgRcG3bpl85DuClAyXHVj3y0H0VVbz11ai+yfMOBG9UdbMnk2qmfImrOQ5Olaz7qL+i6LEXsZ6fVXKs6t9+WsNGvvMSfQuk9jTNzRQTLqNhcF37CqYTntDRNqwWsslXRtwbisfQSfhM8HQoruA84TpeDaFPLLj0PeFd116bHIg/CHbi74Sbtj1QS2fc9t6ylq38PbPpmynRikK2wJ53uMi/wM1fN+qzFTTtaxlTsSBouVB2YjG2cwzPbZi7nX1px5auhtnEE4aiaUUdP0Q3Z43n/G88qIyHu2xsW3RiVmNm/E6c8dp/4B4/cvgH5RFn8E7J/cYAAAAASUVORK5CYII="/>
+          </svg>
+          </button>
+          </div>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main>
+  <section class="left-right">
+    <div class="container">
+      <div class="row">
+    <div class="col-6">
+    <h2 class="text left-text regular">
+      Быстрая бронь
+    </h2>
+    <ul class="section-list-item">
+      <li class="section-input-item regular">Город</li>
+      <li class="section-input-item regular">Категория номера</li>
+      <li class="section-input-item regular">Дата заселения</li>
+      <li class="section-input-item regular">Количество ночей</li>
+      <li class="section-input-item regular">Количество гостей</li>
+    </ul>
+    <div class="section-form regular">
+      <input class="form-button" type="button" name="search number" value="Найти номер" >
+      <span class="number-span regular">
+        9 756
+      </span>
+      предложений доступно
+    </div>
+  </div>
+    <div class="col-6">
+    <h2 class="text right-text regular">
+      Спецпредложение
+    </h2>
+    <div class="images-right"><img class="right-text-img" src="img/спецпредложение.jpg" alt="Спецпредложение">
+      <span class="span-s regular">от 5 000 р</span>
+      <h2 class="text-right bold">Номер <br> категории <br> люкс</h2>
+       <h2 class="span-h2 regular"> <a class="span-h2__href" href="#"> Подробнее <img class="span-h2-img" src="./img/Шапка/галочка.png" alt="">
+      </a></h2>
+    </div>
+
+      </a>
+</div>
+</div>
+<div class="info container">
+  <h2 class="text" >О нас</h2>
+  <p class="text-line regular">
+    Идейные соображения высшего порядка, а также сложившаяся структура организации влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям. Идейные соображения высшего порядка, а также дальнейшее развитие различных форм деятельности представляет собой интересный эксперимент проверки системы обучения кадров, соответствует насущным потребностям. Равным образом сложившаяся структура организации требуют определения и уточнения существенных финансовых и административных условий.
+  </p>
+</div>
+  </section>
+<section class="service">
+  <div class="container">
+    <h2 class="text regular">
+      Услуги
+    </h2>
+    <ul class="service-list">
+      <div class="row">
+      <li class="col-6">
+        <div class="service-item">
+          <a class="service-item__link" href="#">
+            <img class="service-item-img" src="img/Услуги/Эксклюзивное обслуживание.jpg" alt="">
+        <div class="service-block">
+          <span class="service-text regular">Эксклюзивное обслуживание
+            <img class="span-h2-img" src="./img/Шапка/галочка.png" alt="">
+          </span>
+        </a>
+          <p class="section-service-text regular">
+            Равным образом постоянный количественный рост и сфера нашей активности
+          </p>
+        </div>
+      </div>
+      </li>
+      <li class="col-6">
+        <div class="service-item">
+        <a class="service-item__link" href="#">
+          <img class="service-item-img" src="img/Услуги/аренда.jpg" alt="">
+          <div class="service-block">
+          <span class="service-text regular">Аренда банкетных залов
+            <img class="span-h2-img" src="./img/Шапка/галочка.png" alt="">
+          </span>
+     </a>
+      <p class="section-service-text regular">
+        Значимость этих проблем настолько очевидна, что дальнейшее развитие различных форм.
+      </p>
+   </div>
+  </div>
+   </li>
+   <li class="col-6">
+     <div class="service-item">
+      <a class="service-item__link" href="#">
+        <img class="service-item-img" src="img/Услуги/Сауны, Боссейны.jpg" alt="">
+        <div class="service-block">
+        <span class="service-text regular">Сауны, бассейны, бани, фитнес-залы
+          <img class="span-h2-img" src="./img/Шапка/галочка.png" alt="">
+        </span>
+    </a>
+    <p class="section-service-text regular">
+      Не следует, однако забывать, что начало повседневной работы по формированию позиции
+    </p>
+    </div>
+  </div>
+    </li>
+    <li class="col-6">
+      <div class="service-item">
+    <a class="service-item__link" href="#">
+      <img class="service-item-img" src="img/Услуги/Охраняемы авто стоянки.jpg" alt="">
+      <div class="service-block">
+      <span class="service-text regular">Охраняемые автомобильные стоянки
+        <img class="span-h2-img" src="./img/Шапка/галочка.png" alt="">
+      </span>
+    </a>
+    <p class="section-service-text regular">
+      Не следует, однако забывать, что начало повседневной работы по формированию позиции
+    </p>
+    </div>
+  </div>
+    </li>
+  </div>
+    </ul>
+  </div>
+  </div>
+</section>
+<section class="advantage">
+  <div class="container">
+  <h2 class="text regular">
+    Преимущества
+  </h2>
+  <ul class="row">
+    <li class="col-3 section-clients-column">
+      <div class="section-item">
+      <svg class="width" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="63" height="59" viewBox="0 0 63 59">
+        <metadata><?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
+      <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c142 79.160924, 2017/07/13-01:06:39        ">
+         <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+            <rdf:Description rdf:about=""/>
+         </rdf:RDF>
+      </x:xmpmeta>
+      <?xpacket end="w"?></metadata>
+      <image id="bathtub" width="63" height="59" xlink:href="data:img/png;base64,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"/>
+      </svg>
+      <p class="p-text regular">
+        Идейные соображения высшего порядка, а также постоянный количественный рост
+      </p>
+      </div>
+    </li>
+      <li class="col-3 section-clients-column">
+        <div class="section-item">
+        <svg class="width" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60" height="59" viewBox="0 0 60 59">
+          <metadata><?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
+        <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c142 79.160924, 2017/07/13-01:06:39        ">
+           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+              <rdf:Description rdf:about=""/>
+           </rdf:RDF>
+        </x:xmpmeta>
+        <?xpacket end="w"?></metadata>
+        <image id="hanger" width="60" height="59" xlink:href="data:img/png;base64,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"/>
+        </svg>
+        <p class="p-text regular">
+          Значимость этих проблем настолько очевидна, что вопрос остается открытым
+        </p>
+        </div>
+      </li>
+      <li class="col-3 section-clients-column">
+        <div class="section-item">
+        <svg class="width" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="69" height="59" viewBox="0 0 69 59">
+          <metadata><?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
+        <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c142 79.160924, 2017/07/13-01:06:39        ">
+           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+              <rdf:Description rdf:about=""/>
+           </rdf:RDF>
+        </x:xmpmeta>
+        <?xpacket end="w"?></metadata>
+        <image id="heating" width="69" height="59" xlink:href="data:img/png;base64,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"/>
+        </svg>
+        <p class="p-text regular">
+          Таким образом реализация плановых заданий играет важную роль для понимания
+        </p>
+        </div>
+      </li>
+      <li class="col-3 section-clients-column">
+        <div class="section-item">
+        <svg class="width" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="64" height="59" viewBox="0 0 64 59">
+          <metadata><?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
+        <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c142 79.160924, 2017/07/13-01:06:39        ">
+           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+              <rdf:Description rdf:about=""/>
+           </rdf:RDF>
+        </x:xmpmeta>
+        <?xpacket end="w"?></metadata>
+        <image id="hotel-key" width="64" height="59" xlink:href="data:img/png;base64,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"/>
+        </svg>
+        <p class="p-text regular">
+          Повседневная практика показывает, что сложившаяся структура организации
+        </p>
+        </div>
+      </li>
+      <li class="col-3 section-clients-column">
+        <div class="section-item">
+        <svg class="width" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="61" height="59" viewBox="0 0 61 59">
+          <metadata><?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
+        <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c142 79.160924, 2017/07/13-01:06:39        ">
+           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+              <rdf:Description rdf:about=""/>
+           </rdf:RDF>
+        </x:xmpmeta>
+        <?xpacket end="w"?></metadata>
+        <image id="parking" width="61" height="59" xlink:href="data:img/png;base64,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"/>
+        </svg>
+        <p class="p-text regular">
+          Равным образом рамки и место обучения кадров способствует подготовки сотрудника
+        </p>
+        </div>
+      </li>
+      <li class="col-3 section-clients-column">
+        <div class="section-item">
+        <svg class="width" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="64" height="59" viewBox="0 0 64 59">
+          <metadata><?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
+        <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c142 79.160924, 2017/07/13-01:06:39        ">
+           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+              <rdf:Description rdf:about=""/>
+           </rdf:RDF>
+        </x:xmpmeta>
+        <?xpacket end="w"?></metadata>
+        <image id="reception" width="64" height="59" xlink:href="data:img/png;base64,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"/>
+        </svg>
+        <p class="p-text regular">
+          Консультация с активом влечет за собой процесс внедрения услуг нашего сервиса
+        </p>
+        </div>
+      </li>
+      <li class="col-3 section-clients-column">
+        <div class="section-item">
+        <svg class="width" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="68" height="59" viewBox="0 0 68 59">
+          <metadata><?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
+        <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c142 79.160924, 2017/07/13-01:06:39        ">
+           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+              <rdf:Description rdf:about=""/>
+           </rdf:RDF>
+        </x:xmpmeta>
+        <?xpacket end="w"?></metadata>
+        <image id="security-box" width="68" height="59" xlink:href="data:img/png;base64,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"/>
+        </svg>
+        <p class="p-text regular">
+          Повседневная практика показывает, что дальнейшее развитие различных форм
+        </p>
+        </div>
+      </li>
+      <li class="col-3 section-clients-column">
+        <div class="section-item">
+        <svg class="width" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60" height="59" viewBox="0 0 60 59">
+          <metadata><?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
+        <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c142 79.160924, 2017/07/13-01:06:39        ">
+           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+              <rdf:Description rdf:about=""/>
+           </rdf:RDF>
+        </x:xmpmeta>
+        <?xpacket end="w"?></metadata>
+        <image id="swimming-pool" width="60" height="59" xlink:href="data:img/png;base64,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"/>
+        </svg>
+        <p class="p-text regular">
+          Значимость этого настолько очевидна, что консультация наших экспертов помогает
+        </p>
+        </div>
+      </li>
+  </ul>
+  </div>
+</section>
+<section class="accommodation-section">
+  <div class="container">
+    <h2 class="text regular">
+      Размещение
+    </h2>
+    <ul class="row">
+      <li class="col-4">
+        <div class="accommodation">
+        <img class="acommodation-lagoo-img" src="img/Размещение/Lagoona espanola.jpg" alt="" class="accommodation-icon" >
+        <div class="li-container">
+        <p class="accommodation-p">
+           <span>от</span>
+           <strong>4 698 р</strong>
+            / ночь
+            <img src="img/Размещение/Не пустая.svg.png" alt="Рейтинг фильма 4 из 5">
+            <img src="img/Размещение/Не пустая.svg.png" alt="">
+            <img src="img/Размещение/Не пустая.svg.png" alt="">
+            <img src="img/Размещение/Не пустая.svg.png" alt="">
+            <img src="img/Размещение/пустая.png" alt="">
+        </p>
+        <span>Lagoona española</span>
+        <br>
+        <span class="country bold">Барселона,Испания</span>
+        <div class="buttom">
+          <a href="" class="div-buttom bold">Найти</a>
+        </div>
+        </div>
+        </div>
+      </li>
+      <li class="col-4">
+        <div class="accommodation">
+        <img class="acommodation-lagoo-img" src="img/Размещение/Lagoona son tipicas.jpg" alt="" class="accommodation-icon" >
+        <div class="li-container">
+        <p class="accommodation-p">
+           <span>от</span>
+           <strong>5 148 р</strong>
+            / ночь
+            <img src="img/Размещение/Не пустая.svg.png" alt="Рейтинг фильма 4 из 5">
+            <img src="img/Размещение/Не пустая.svg.png" alt="">
+            <img src="img/Размещение/Не пустая.svg.png" alt="">
+            <img src="img/Размещение/Не пустая.svg.png" alt="">
+            <img src="img/Размещение/пустая.png" alt="">
+        </p>
+        <span class="regular">Lagoona son típicas</span>
+        <br>
+        <span class="country bold">Барселона,Испания</span>
+        <div class="buttom">
+          <a href="" class="div-buttom bold">Найти</a>
+        </div>
+        </div>
+        </div>
+      </li>
+      <li class="col-4">
+        <div class="accommodation">
+        <img class="acommodation-lagoo-img" src="img/Размещение/Lagoona de la guerra.jpg" alt="" class="accommodation-icon" >
+        <div class="li-container">
+        <p class="accommodation-p">
+           <span>от</span>
+           <strong>6 254 р</strong>
+            / ночь
+            <img src="img/Размещение/Не пустая.svg.png" alt="Рейтинг фильма 4 из 5">
+            <img src="img/Размещение/Не пустая.svg.png" alt="">
+            <img src="img/Размещение/Не пустая.svg.png" alt="">
+            <img src="img/Размещение/Не пустая.svg.png" alt="">
+            <img src="img/Размещение/пустая.png" alt="">
+        </p>
+        <span class="regular">Lagoona de la guerra</span>
+        <br>
+        <span class="country bold">Барселона,Испания</span>
+        <div class="buttom">
+          <a href="" class="div-buttom bold">Найти</a>
+        </div>
+        </div>
+        </div>
+      </li>
+      <li class="col-4">
+        <div class="accommodation">
+        <img class="acommodation-lagoo-img" src="img/Размещение/Lagoona mentira.jpg" alt="" class="accommodation-icon" >
+        <div class="li-container">
+        <p class="accommodation-p">
+           <span>от</span>
+           <strong>6 320 р</strong>
+            / ночь
+            <img src="img/Размещение/Не пустая.svg.png" alt="Рейтинг фильма 4 из 5">
+            <img src="img/Размещение/Не пустая.svg.png" alt="">
+            <img src="img/Размещение/Не пустая.svg.png" alt="">
+            <img src="img/Размещение/Не пустая.svg.png" alt="">
+            <img src="img/Размещение/пустая.png" alt="">
+        </p>
+        <span class="regular">Lagoona mentira piadosa</span>
+        <br>
+        <span class="country bold">Барселона,Испания</span>
+        <div class="buttom">
+          <a href="" class="div-buttom bold">Найти</a>
+        </div>
+        </div>
+        </div>
+      </li>
+      <li class="col-4">
+        <div class="accommodation">
+        <img class="acommodation-lagoo-img" src="img/Размещение/Lagoona empujar.jpg" alt="" class="accommodation-icon" >
+        <div class="li-container">
+        <p class="accommodation-p">
+           <span>от</span>
+           <strong>6 457 р</strong>
+            / ночь
+            <img src="img/Размещение/Не пустая.svg.png" alt="Рейтинг фильма 4 из 5">
+            <img src="img/Размещение/Не пустая.svg.png" alt="">
+            <img src="img/Размещение/Не пустая.svg.png" alt="">
+            <img src="img/Размещение/Не пустая.svg.png" alt="">
+            <img src="img/Размещение/пустая.png" alt="">
+        </p>
+        <span class="regular">Lagoona empujar la creatividad</span>
+        <br>
+        <span class="country bold">Барселона,Испания</span>
+        <div class="buttom">
+          <a href="" class="div-buttom bold">Найти</a>
+        </div>
+        </div>
+        </div>
+      </li>
+      <li class="col-4">
+        <div class="accommodation">
+        <img class="acommodation-lagoo-img" src="img/Размещение/Lagoona el retorno.jpg" alt="" class="accommodation-icon" >
+        <div class="li-container">
+        <p class="accommodation-p">
+           <span>от</span>
+           <strong>6 490 р</strong>
+            / ночь
+            <img src="img/Размещение/Не пустая.svg.png" alt="Рейтинг фильма 4 из 5">
+            <img src="img/Размещение/Не пустая.svg.png" alt="">
+            <img src="img/Размещение/Не пустая.svg.png" alt="">
+            <img src="img/Размещение/Не пустая.svg.png" alt="">
+            <img src="img/Размещение/пустая.png" alt="">
+        </p>
+        <span class="regular">Lagoona el retorno</span>
+        <br>
+        <span class="country bold">Барселона,Испания</span>
+        <div class="buttom">
+          <a href="" class="div-buttom bold">Найти</a>
+        </div>
+        </div>
+        </div>
+      </li>
+      <li class="col-4">
+        <div class="accommodation">
+        <img class="acommodation-lagoo-img" src="img/Размещение/Lagoona enfermo.jpg" alt="" class="accommodation-icon" >
+        <div class="li-container">
+        <p class="accommodation-p">
+           <span>от</span>
+           <strong>6 505 р</strong>
+            / ночь
+            <img src="img/Размещение/Не пустая.svg.png" alt="Рейтинг фильма 4 из 5">
+            <img src="img/Размещение/Не пустая.svg.png" alt="">
+            <img src="img/Размещение/Не пустая.svg.png" alt="">
+            <img src="img/Размещение/Не пустая.svg.png" alt="">
+            <img src="img/Размещение/пустая.png" alt="">
+        </p>
+        <span class="regular">Lagoona enfermo terminó</span>
+        <br>
+        <span class="country bold">Барселона,Испания</span>
+        <div class="buttom">
+          <a href="" class="div-buttom bold">Найти</a>
+        </div>
+        </div>
+        </div>
+      </li>
+      <li class="col-4">
+        <div class="accommodation">
+        <img class="acommodation-lagoo-img" src="img/Размещение/Lagoona suerte.jpg" alt="" class="accommodation-icon" >
+        <div class="li-container">
+        <p class="accommodation-p">
+           <span>от</span>
+           <strong>6 824 р</strong>
+            / ночь
+            <img src="img/Размещение/Не пустая.svg.png" alt="Рейтинг фильма 4 из 5">
+            <img src="img/Размещение/Не пустая.svg.png" alt="">
+            <img src="img/Размещение/Не пустая.svg.png" alt="">
+            <img src="img/Размещение/Не пустая.svg.png" alt="">
+            <img src="img/Размещение/пустая.png" alt="">
+        </p>
+        <span class="regular">Lagoona suerte siguió siempre</span>
+        <br>
+        <span class="country bold">Барселона,Испания</span>
+        <div class="buttom">
+          <a href="" class="div-buttom bold">Найти</a>
+        </div>
+        </div>
+        </div>
+      </li>
+      <li class="col-4 p-icon">
+        <div class="accommodation">
+        <a href="#" class="icon-p-a">
+
+        <p class="icon-p">
+          Посмотреть все варианты
+          <svg class="span-svg" xmlns="http://www.w3.org/2000/svg" width="9.19" height="16" viewBox="0 0 9.19 16">
+            <metadata><?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
+          <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c142 79.160924, 2017/07/13-01:06:39        ">
+             <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+                <rdf:Description rdf:about=""/>
+             </rdf:RDF>
+          </x:xmpmeta>
+          <?xpacket end="w"?></metadata>
+          <defs>
+              <style>
+                .cls-1 {
+                  fill: none;
+                  stroke: white;
+                  stroke-linecap: round;
+                  stroke-width: 2px;
+                  fill-rule: evenodd;
+                }
+              </style>
+            </defs>
+            <path id="Прямоугольник_2_копия_7" data-name="Прямоугольник 2 копия 7" class="cls-1" d="M1302.5,801.5l6.79,7-6.79,7" transform="translate(-1301.5 -800.5)"/>
+          </svg>
+          </p>
+          </a>
+          </div>
+      </li>
+    </ul>
+  </div>
+</section>
+<section class="contacts-input">
+  <div class="container">
+    <div class="contacts-input-container">
+    <div class="contacts">
+      <h2 class="contacts-contacts regular">
+        Контакты
+      </h2>
+      <div class="contacts-container">
+       <div class="adress contacts-block regular"> <div class="block-item"><h2 class="contacts-item">Адрес</h2> <p class="adress-p-item">Москва, улица Юности, дом 5 <br> строение 4, офис 2</p></div></div>
+       <div class="phone contacts-block regular"> <div class="block-item"><h2 class="contacts-item">Телефоны</h2> <p class="p-phone">+7 (499) 535-64-34 <br> +7 (495) 005-05-44</p></div></div>
+       <div class="email contacts-block regular"> <div class="block-item"> <h2 class="contacts-item">E-mail</h2> <p class="p-email"> <em> g.oona@mail.ru </em> по вопросам <br>
+        бронирования <br>
+         <em> hotels.ln@mail.ru </em> по вопросам <br> сотрудничества</p></div></div>
+       <div class="grafic contacts-block"><div class="block-item"><h2 class="contacts-item">График</h2> <p class="p-grafic regular">Понедельник - пятница, <br>
+        с 10:0 до 19:00</p></div></div>
+        <div class="btn-contacts">
+          <a href="#" class="btn-text bold">Построить маршрут</a>
+        </div>
+      </div>
+    </div>
+    <div class="input-div">
+      <form action="https://jsonplaceholder.typicode.com/posts" autocomplete method="POST" class="form">
+        <h2 class="form-h2 regular ">Напишите нам</h2>
+        <input type="text" name="name" placeholder="Имя" class="input regular">
+        <input type="phone" name="phone" placeholder="+7" class="input regular">
+        <textarea class="textarea regular" name="text" id="" placeholder="Сообщение..." cols="30" rows="10"></textarea>
+        <button class="btn-form bold" type="submit">Отправить</button>
+      </form>
+    </div>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="footer">
+  <div class="container">
+    <div class="footer-container">
+      <div class="footer-block1 regular">
+        © 2012-2020 Управляющая компания
+         <br> Объединенной сети «Лагуна Хотелс»
+        <br> <br>
+        Представленная на сайте информация <br>
+        носит справочный характер <br>
+        и не является публичной офертой <br>
+        <br>
+         <em class="em-footer regular"> Политика конфиденциальности </em> <br>
+      </div>
+      <div class="footer-block2 regular">
+        <em class="em-block regular"> 1710, улица Юности, дом 5 строение 4, офис 2 </em> <br> <br>
+        <em class="em-footer2 regular">
+        +7 (499) 535-64-34 <br>
+        +7 (495) 005-05-44 <br> <br>
+
+        lg.oona@mail.ru <br>
+        hotels.ln@mail.ru
+        </em>
+      </div>
+      <div class="footer-block3"></div>
+      <div class="footer-block4">
+        <a class="a-footer" href="#">
+        <svg class="tripadvisor footer-social" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="25" height="25" viewBox="0 0 25 25">
+          <metadata><?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
+        <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c142 79.160924, 2017/07/13-01:06:39        ">
+           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+              <rdf:Description rdf:about=""/>
+           </rdf:RDF>
+        </x:xmpmeta>
+
+        <?xpacket end="w"?></metadata>
+        <defs>
+            <style>
+              .cls-1 {
+                opacity: 0.5;
+              }
+            </style>
+          </defs>
+          <image id="tripadvisor" class="cls-1" width="25" height="25" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAQAAABu4E3oAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfkDAMADgwBcdB+AAACA0lEQVQ4y53UTUuVQRjG8d88PSfNhCOYlhpZtHBjGkEhpr0YIREtJAjqC9SijxPULmgVBEmBUC0sIlFpIdkhN27MTipiKYfyLZ0WHiXLUrp2w8x/5p6b67pDtK4AYka9OhUSq2bljYVlm5T+uohZbZqUbDqxGIe9CXN+uxoxaNEhYyst6zUQ4iYk7tKl0b+U0x1WICm+sB1Ao64YNhAt2wJrUEsRiVkdOwCgI2bXOta26dOTRk1aEgUZtRrs29jLaNOTxowmLFjAtJdKndNaLPiHcU/t0q4M5co1xRepeiUouBtW416HrHis1SkwpE+lxKMwH4ObypWoT9WBKrWxRqcUC55a1O61CbeUYik+88kBUJeqANNSlw0akTjrqnuOyLlpVD9OuOK+CTWoSIpVj2g2Ke+sTr0SjZ44ZsWgThcMKzhuBCSp1TUnqfbVQf3qlVm2N0zHcgVVPphX7ZsyebCamAXVphz13nEZwW4TmFTpi2pHfLbfVLHZs0mRbfDOvBsK9rhq2jCGzLhmyYLrvhvWDPKpMYtKlLrkgfOarHjnjYvxuYseOqNRMOqVS8qwaCwQLzsJZvQZlzisVVZenYI+H0U1TqsEb0NPIGbd/ktO/szNnTCXEOb07tCWvWFu3fwDcjsAcgaK5idE3dtCOd1rUf7/7BexLSeMv02YDWzbOfYThGuwsPNpSwUAAAAASUVORK5CYII="/>
+        </svg>
+        </a>
+        <a class="a-footer href="#">
+        <svg class="twitter footer-social" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+          <metadata><?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
+        <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c142 79.160924, 2017/07/13-01:06:39        ">
+           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+              <rdf:Description rdf:about=""/>
+           </rdf:RDF>
+        </x:xmpmeta>
+        <?xpacket end="w"?></metadata>
+        <defs>
+            <style>
+              .cls-1 {
+                opacity: 0.5;
+              }
+            </style>
+          </defs>
+          <image id="twitter" class="cls-1" width="24" height="24" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAQAAABKfvVzAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfkDAMADSgWX2dsAAABpUlEQVQ4y52UQUsbURSFv/uYGIlUG5goihAM7sRaKVUJrsSCP0A3ghuhtH9JXImCi65aKPQXxJJCoYsuChKNtERJaEyUiFTndpHHyxtNLPVu5pzhnPvu3OE8IVZqyJIjQwpoUaVEWSJfITHxHHkG4y1oUqDYMTmDhqwxQvc6453UYgYdZ4MkveuaXfkJYGz3h+WQZENDe4Ia3jBC1DZ7VeGAc0LyhNTo44otiQR0gRXgPc+Y8OSH7MstgCYIgU0SfJLPRg15AE7Y46tn+NiWg/yRCsJ3IK/GkLWL7Jdb+cAOJ+1lSj023jTPgUGyATn76gW/QI440jQTDNz5npf2mQvIWHiqQ9IAkDrx7miSwMKMIWVhvS3vWsMOpTqrXNJET8NkBxpaFo2yqkPd1GqYcaRlqDpy02OoWZ46XDWUHJnSRTX3+qd55dGSoUzT0WXeajomH2CdfkeblAOJtMAKDS654JhvcuXJx1n1xoGCRAFQZJaQH3yRqiceZZ4ZP2CcUbR50JDXJIHfVGgBTxi7l7xrtqX2iAA9NqL2B/3PJeBM/7hm/gIFMIWoRqxZxwAAAABJRU5ErkJggg=="/>
+        </svg>
+        </a>
+        <a class="a-footer href="#">
+        <svg class="facebook footer-social" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+          <metadata><?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
+        <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c142 79.160924, 2017/07/13-01:06:39        ">
+           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+              <rdf:Description rdf:about=""/>
+           </rdf:RDF>
+        </x:xmpmeta>
+        <?xpacket end="w"?></metadata>
+        <defs>
+            <style>
+              .cls-1 {
+                opacity: 0.5;
+              }
+            </style>
+          </defs>
+          <image id="facebook" class="cls-1" width="24" height="24" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAQAAABKfvVzAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfkDAMADQ1dW7MrAAABU0lEQVQ4y53UsYqTQRTF8d8MHy6EdQXZsBaLgSjrNsKCECSI9b5AwMbSdxIs05kXsBeCpLFTRAgbUDAkWEQIxuIbi6zxm0RI4qlm7vzP5XCHmSBTihqa6mqYmxgahbJKhAxuaTvKW5jpG/w1rQzpWMeJf2usF6aZIZ167iCDPrsylzx0Dwvd8GVlSMdeZHjyOny8Xl56DBZehSmRFHXWur//g1d0oJMiBVob2T9Buu+pG5UhnGh5F1PU3uj2Azxy1x21Sr2dYtTYGCTl+sivdaRRaK5N/Tt+ga/g1GHlvFmoZ4YP4c3qit5Ceua8cl6PWcbtqhVrhdvpHFfhJ2kZ5mYOFObZ/swZXvqGJ1mYpebRZK9Ik2i4l2EYjcx2xmdGMZT6Oxv6oYwYGO+Ejw2IhFLPYiu+0AslEcJUN7M8SBfpwq0M7y7f3P8+Ufb+BFamLd/Mb6i6ZyrsEypOAAAAAElFTkSuQmCC"/>
+        </svg>
+        </a>
+        <a class="a-footer href="#">
+        <svg class="social footer-social" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+          <metadata><?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
+        <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c142 79.160924, 2017/07/13-01:06:39        ">
+           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+              <rdf:Description rdf:about=""/>
+           </rdf:RDF>
+        </x:xmpmeta>
+        <?xpacket end="w"?></metadata>
+        <defs>
+            <style>
+              .cls-1 {
+                opacity: 0.5;
+              }
+            </style>
+          </defs>
+          <image id="social" class="cls-1" width="24" height="24" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAQAAABKfvVzAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfkDAMADBVXLBo8AAABnElEQVQ4y53UsWuTURQF8N97TVoIEpfGLkIhKqhQEFuqBHETXYoucevf4H/kkkEkm4s6uAiKxM1CBYdAtSpNmsEMxbQ1z6Gfn/nAmuqZLveec9+Bd+8NCkjRorqaCvb0dW2F8SQjFMirGqrFFoZe6/wW5YI0r2nBn7GjHXYLgnTWujnHY6QVtiFm3f9OZ856ms8EKWpOoR9JmikevbB6rPciFqxSSlEDh7rGys7hvXeSGbdVMfAJ0UWzGqlTsqiKfe1wQLrniguehiFpSRWPQ48UPTCrajGqg4pl8EpSUsttfAg9sOI0qMe8eCOVCX1vJ1wfeA7pjFtZphZVsvCUa+CFjwbgiydhQCprKmesSmmi3820Eb6FkYfZn77M8ksTFkV7eTzrbpqYrRybPufxXtSfKNVzr0i1dBnCdy1fs2Q/6ha6NdJa+uV3xf10NZM8cgC6JVuGhZFedilt6Dl0HmupZtsPM/aVDW0F0nV3TjQaPAtvIjp2TkTf0SESxtpGU+kj7TDO9iHsak2RjLSOdu5/V5R/PgK5aMqZ+QnOXYa8ya/5VgAAAABJRU5ErkJggg=="/>
+        </svg>
+        </a>
+        <a class="a-footer href="#">
+        <svg class="google footer-social" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="25" height="25" viewBox="0 0 25 25">
+          <metadata><?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
+        <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c142 79.160924, 2017/07/13-01:06:39        ">
+           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+              <rdf:Description rdf:about=""/>
+           </rdf:RDF>
+        </x:xmpmeta>
+        <?xpacket end="w"?></metadata>
+        <defs>
+            <style>
+              .cls-1 {
+                opacity: 0.5;
+              }
+            </style>
+          </defs>
+          <image id="google-plus-social-logotype" class="cls-1" width="25" height="25" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAQAAABu4E3oAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfkDAMADCrhSjcBAAACBElEQVQ4y53U32vNYRwH8Nfz3Y5h6SBsWYzIjzoWoqZOaBeIJLlwq/wT/hhXLuQGF0JRK5pS8qMl8uPCwSY/xtammWPncbHH1/keK/G5et6f5/3u8+v5PEGLxZJePZbKNIwbUQv1IiMU6GVVfToKjBnDhsLEPJIY9BtQMp/VDbobYkES2xxXSYQpb035ATpVEuexy2EW2lOEX4JPblmBe2EqrrfVxjyPCvFiiGSgPwneO6tqn31Ox4VqVlrUlF5FP2TEsoHkvK5DF1hmT2gYbKlpIJbnolRT0d/UNPLrzfjYIimpksWSvuSYDTFM+prQUnTmDfmQTn2xlOnN59AZV+N+QtPM5Y6XeYodejM9TYGPxoVue4pvbsS9ds8zo54Qj9nR5Jh035gvRu1yGJz32qyGEs7gYXtq8y9bYj/OhUZcnDyHfPfMKwcTzrKmHv22dbjtDliuW1mHbt2g0W68QH7nuTGNuDJ8dDOOOwK6514JGG83koOvLpl2QFUb8YGr4V5caxt5BBjJ1MwkcMF7p6zTBnY6GYMnLSnPqGWhbhiMhjd6LGi63qTrj0qHQz3DkDrq+CQWCNGWAq4bIiNMGMSauCqMuZb2BB5ZZntBMhgm0orF4ISKSVe8sNgGZT98ttaewtQeuxjin1s5adS0kuW6Woacb+X/736S/dsPk8v++o/9BFvQrP92m28PAAAAAElFTkSuQmCC"/>
+        </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
